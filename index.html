@@ -42,7 +42,7 @@
 <h2>Open the seal by arranging the true animals in the correct order</h2>
 
 <div class="container">
-    <img src="https://static.wikia.nocookie.net/naruto/images/2/27/Four_Symbols_Seal.svg/revision/latest?cb=20150510014907" alt="Seal Image">
+    <img src="https://live.staticflickr.com/4094/4778868007_ebdedcf1e3_n.jpg" alt="Seal Image">
     
     <input type="text" id="box1" placeholder="Animal 1">
     <input type="text" id="box2" placeholder="Animal 2">
@@ -61,10 +61,10 @@ function checkPassword() {
         document.getElementById("box4").value.trim().toLowerCase()
     ];
     
-    const correctOrder = ["mouse", "ox", "lion", "ox"];
+    const correctOrder = ["horse", "monkey", "snake", "snake"];
     
     if (JSON.stringify(answers) === JSON.stringify(correctOrder)) {
-        alert("first secret: MA");
+        alert("third secret: EM");
     } else {
         alert("the seal is unbroken");
     }
@@ -73,3 +73,4 @@ function checkPassword() {
 
 </body>
 </html>
+
