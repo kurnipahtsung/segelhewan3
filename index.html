@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open the Seal</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .container {
+        display: inline-block;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    img {
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    input {
+        display: block;
+        margin: 10px auto;
+        padding: 8px;
+        width: 150px;
+        font-size: 16px;
+        text-align: center;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h2>Open the seal by arranging the true animals in the correct order</h2>
+
+<div class="container">
+    <img src="https://static.wikia.nocookie.net/naruto/images/2/27/Four_Symbols_Seal.svg/revision/latest?cb=20150510014907" alt="Seal Image">
+    
+    <input type="text" id="box1" placeholder="Animal 1">
+    <input type="text" id="box2" placeholder="Animal 2">
+    <input type="text" id="box3" placeholder="Animal 3">
+    <input type="text" id="box4" placeholder="Animal 4">
+    
+    <button onclick="checkPassword()">Confirm</button>
+</div>
+
+<script>
+function checkPassword() {
+    const answers = [
+        document.getElementById("box1").value.trim().toLowerCase(),
+        document.getElementById("box2").value.trim().toLowerCase(),
+        document.getElementById("box3").value.trim().toLowerCase(),
+        document.getElementById("box4").value.trim().toLowerCase()
+    ];
+    
+    const correctOrder = ["mouse", "ox", "lion", "ox"];
+    
+    if (JSON.stringify(answers) === JSON.stringify(correctOrder)) {
+        alert("first secret: MA");
+    } else {
+        alert("the seal is unbroken");
+    }
+}
+</script>
+
+</body>
+</html>
